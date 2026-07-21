@@ -1,0 +1,40 @@
+<!-- body for page, should have ablility to 
+ 1. Post blog  
+ 2. View post
+ 3. Post Update
+ 4. Post Delete -->
+
+<%- include("partials/header.ejs") %>
+
+<body>
+  <div class="hero">
+    <div class="px-4 py-5 my-5 text-center">
+      <img class="blog-logo" src="images/blogger.png" alt="blog logo" />
+      <h1 class="display-4 fw-bold text-body-emphasis">Blog Poster</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Discover fresh ideas, insightful articles, and engaging stories all in
+          one place. Our blog covers a variety of topics designed to inform,
+          inspire, and entertain readers from all walks of life. Whether you're
+          looking for the latest trends, helpful guides, or thoughtful opinions,
+          you'll always find something worth reading. Explore, learn, and join
+          our growing community of curious minds.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <form action="/post" method="GET">
+            <button type="submit" class="btn btn-dark btn-lg px-4 gap-3">
+              Post a Blog
+            </button>
+          </form>
+          <form action="/view" method="GET">
+            <button type="submit" class="btn btn-outline-light btn-lg px-4">
+              View the community
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<%- include("partials/footer.ejs") %>

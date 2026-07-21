@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+  <section id="view-post">
+    <div class="view-title">
+      <% if(locals.blogs[0]) { %>
+        <% //console.log(blogs.length) %>
+      <% } else { %>
+        <h2>Nothing to see here...</h2>
+      <% } %>
+    </div>
+    <div class="view_content">
+      <% if(locals.blogs[0]) { %>
+        <% for(var i = 0; i<blogs.length; i++) { %>
+          <p class="view-blog"> <%= blogs[i] %> </p>
+          <div class="action-buttons">
+            <form action="/post" method="GET">
+              <input class="edit-button" type="submit" value="Edit">
+            </form>
+            <form action="/view" method="GET">
+              <input class="delete-button" type="submit" value="Delete">
+            </form>
+          </div>
+        <% } %>
+      <%  } else { %>
+        <img class="tumbleweed" src="images/tumble.jpg" alt="tumbleweed" />
+      <% } %>
+    </div>
+  </section>
+</body>
+
+<%- include("partials/footer.ejs") %>

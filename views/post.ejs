@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+  <section id="post">
+    <div class="container">
+      <div class="side-track">
+        <img src="images/kitty.jpg" alt="kitty" />
+        <h2 class="thoughts">Grab a cup of coffee-</h2>
+        <p>
+          Because great conversations begin with honest thoughts. Take a moment
+          to express how you feel—your words could spark meaningful discussions.
+        </p>
+        <p>
+          This is a place where every opinion counts. Share what's on your mind
+          and be part of a conversation that brings people together.
+        </p>
+      </div>
+      <div class="blog-section">
+        <!--<input class="blog-post" name="blog" value="and here we go..." type="text" required minlength="50" maxlength="1000"/>-->
+        <form action="/view" method="POST">
+          <textarea
+            name="blog_content"
+            id="blog-post"
+            maxlength="1000"
+            minlength="50"
+            required
+            placeholder="and here we go..."
+          ></textarea>
+
+          <input class="submit-post" type="submit" value="Post" />
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+
+<%- include("partials/footer.ejs") %>
