@@ -22,6 +22,10 @@ header .nav-link.active:hover{
     color: white !important;
 }
 
+body{
+    min-height: 100dvh;
+}
+
 .blog-logo{
     height: 8rem;
     margin-bottom: 1rem;
@@ -33,7 +37,7 @@ header .nav-link.active:hover{
 }
 
 .hero{
-    height: 40rem;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +52,12 @@ header .nav-link.active:hover{
 
 .lead{
     color:whitesmoke;
+    padding: 4rem;
+}
+
+.btn{
+    width: 16rem;
+    margin: 1rem;
 }
 
 .foot{
@@ -68,14 +78,13 @@ header .nav-link.active:hover{
 
 #post{
     height: 90vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
+    width: 100vw;
+    padding: 4rem;
 }
 
 #post .container{
     height: 36rem;
-    width: 100%;
+    width: 100vw;
     text-align: left;
     display: flex;
     justify-content: center;
@@ -88,11 +97,9 @@ header .nav-link.active:hover{
     width: 50rem;
     border-radius: 1rem;
     padding: 1rem;
-}
-
-textarea{
     resize: none;
 }
+
 
 .side-track{
     display: flex;
@@ -197,4 +204,115 @@ textarea{
 .delete-button:hover{
     transform: scale(1.08);
     background-color: rgb(255, 0, 0);
+}
+
+@media ( max-width : 800px ){
+    header{
+        height: 8rem;
+    }
+    
+    .lead{
+        text-align: justify;
+    }
+}
+
+@media ( max-width : 500px ){
+    header{
+        height: 16rem;
+    }
+}
+
+@media (max-width: 1740px){
+    .side-track{
+        width: 80vw;
+    }
+
+    #post{
+        height: 120vh;
+    }
+
+    .blog-section form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 1360px){
+    .hero{
+        height: 120vh;
+    }
+}
+
+@media (max-width : 1200px){
+    .side-track{
+        width: 70vw;
+    }
+    .thoughts p{
+        text-align: justify;
+    }
+
+    #blog-post{
+        height: 30rem;
+        width: 40rem;
+    }
+}
+
+@media (max-width : 1050px){
+    #post{
+        height: 180vh;
+    }
+    #post .container{
+        height: 160vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 650px){
+    .hero{
+        height: 140vh;
+        width: 100vw;
+    }
+}
+
+@media (max-width : 700px){
+    #post .container{
+        height: 160vh;
+        width: 60vw;
+    }
+    .side-track{
+        width: 20rem;
+    }
+    #blog-post{
+        height: 30rem;
+        width: 30rem;
+    }
+}
+
+@media (max-width : 500px){
+    .hero{
+        height: 186vh;
+    }
+}
+
+@media (max-width : 550px){
+    #blog-post{
+        height: 24rem;
+        width: 24rem;
+    }
+}
+
+@media (max-width : 400px){
+    #post{
+        height: 170vh;    
+    }
+    
+    #post .container{
+        height: 150vh;
+    }
+
+    #blog-post{
+        height: 20rem;
+        width: 20rem;
+    }
 }
